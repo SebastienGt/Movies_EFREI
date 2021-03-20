@@ -12,7 +12,8 @@
         android:id="@+id/searchView_Home_Search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"/>
+        android:layout_margin="10dp"
+        android:background="#FFFFFF" />
 
     <TextView
         android:id="@+id/textView_Home_Title"

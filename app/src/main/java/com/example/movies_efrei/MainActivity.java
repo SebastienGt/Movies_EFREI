@@ -48,16 +48,22 @@ public class MainActivity extends AppCompatActivity {
 
     LiquidPager pager;
     ViewPager viewPager;
+    public static boolean start = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        setContentView(R.layout.fragment_container);
-        //setContentView(R.layout.activity_main);
-        /*pager=findViewById(R.id.pager);
-        viewPager = new ViewPager(getSupportFragmentManager(), 1);
-        pager.setAdapter(viewPager);
-*/
+        Log.i("MyActivity", "MainAcitivity");
+        //setContentView(R.layout.fragment_container);
+        if (start == false) {
+            setContentView(R.layout.activity_main);
+            pager = findViewById(R.id.pager);
+            viewPager = new ViewPager(getSupportFragmentManager(), 1);
+            pager.setAdapter(viewPager);
+        }
+        else
+        {
+            setContentView(R.layout.fragment_container);
+        }
         mFragmentManager = getSupportFragmentManager();
 
             if (findViewById(R.id.fragment_container)!=null) {
@@ -129,13 +135,4 @@ public class MainActivity extends AppCompatActivity {
             getSupportFragmentManager().popBackStack();
         }
     }
-
-
-
-
-
-
-
-
-
 }

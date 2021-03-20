@@ -59,14 +59,15 @@
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="215dp"
-        android:layout_height="215dp"
+        android:layout_width="298dp"
+        android:layout_height="264dp"
+        android:src="@drawable/illu3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.548"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.335"
-        android:src="@drawable/illu3" />
+        app:layout_constraintVertical_bias="0.267" />
 
     <TextView
         android:id="@+id/textView3"
@@ -89,4 +90,18 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <Button
+        android:id="@+id/buttonGetStarted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Started"
+        android:textColor="#FFFFFF"
+        app:iconTint="#CC2323"
+        android:background="#1E60A2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.909" />
 </androidx.constraintlayout.widget.ConstraintLayout>
