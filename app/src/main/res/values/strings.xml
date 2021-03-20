@@ -4,4 +4,8 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="CheckMovies">titre</string>
     <string name="AppTitre">Efrovies</string>
+    <string name="popular_movies">popular_movies</string>
+    <string name="search_results">Search Results</string>
+    <string name="related_movies">Related Movies</string>
+    <string name="save_favourite">Save as Favourite</string>
 </resources>
