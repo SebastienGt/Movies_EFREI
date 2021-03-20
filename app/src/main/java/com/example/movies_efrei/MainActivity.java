@@ -46,14 +46,18 @@ public class MainActivity extends AppCompatActivity {
 
     private BottomNavigationView mBottomNavigationView;
 
-
-
-
+    LiquidPager pager;
+    ViewPager viewPager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_container);
 
+        setContentView(R.layout.fragment_container);
+        //setContentView(R.layout.activity_main);
+        /*pager=findViewById(R.id.pager);
+        viewPager = new ViewPager(getSupportFragmentManager(), 1);
+        pager.setAdapter(viewPager);
+*/
         mFragmentManager = getSupportFragmentManager();
 
             if (findViewById(R.id.fragment_container)!=null) {
@@ -79,14 +83,15 @@ public class MainActivity extends AppCompatActivity {
             });
 
             mFragmentManager.beginTransaction()
-                    .add(R.id.fragment_container, homeFragment, null)
+                    .add(R.id.fragment_container, new FragmentHome(), null)
                     .commit();
         }
     }
 
     public void setBottomNavigationMenu(int menu){
-       /* mBottomNavigationView.getMenu().clear();
-        switch(menu){
+        /*
+        mBottomNavigationView.getMenu().clear();
+        switch(menu) {
             case MENU_START:
                 mBottomNavigationView.inflateMenu(R.menu.menu_start);
                 break;
@@ -94,9 +99,9 @@ public class MainActivity extends AppCompatActivity {
                 mBottomNavigationView.inflateMenu(R.menu.menu_main);
                 break;
         }
-
-        */
+         */
     }
+
 
     public void replaceFragment(int fragment){
         switch (fragment){
@@ -109,12 +114,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public static void showDetails(Movie movie){
-        /*mFragmentManager.beginTransaction()
+
+        mFragmentManager.beginTransaction()
                 .replace(R.id.fragment_container, new FragmentDetails(movie), null)
                 .addToBackStack(null)
                 .commit();
-
-         */
     }
 
     @Override

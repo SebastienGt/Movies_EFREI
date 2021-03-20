@@ -23,12 +23,13 @@ public class ViewPager extends FragmentPagerAdapter {
             case 0: return new FragmentA();
             case 1: return new FragmentB();
             case 2: return new FragmentC();
+            case 3: return new FragmentHome();
         }
         return null;
     }
 
     @Override
     public int getCount() {
-        return 3;
+        return 4;
     }
 }

@@ -8,4 +8,5 @@
     <string name="search_results">Search Results</string>
     <string name="related_movies">Related Movies</string>
     <string name="save_favourite">Save as Favourite</string>
+    <string name="films_populaires">Films populaires</string>
 </resources>

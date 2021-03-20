@@ -38,6 +38,8 @@ public class FragmentHome extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         Log.d(TAG, "onCreateView");
+
+
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
         ((MainActivity) getActivity()).setBottomNavigationMenu(MainActivity.MENU_MAIN);
@@ -53,7 +55,7 @@ public class FragmentHome extends Fragment {
             searchMovie(searchQuery);
         }
 
-        /*searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
                 textViewTitle.setText(R.string.search_results);
@@ -66,7 +68,7 @@ public class FragmentHome extends Fragment {
             public boolean onQueryTextChange(String newText) {
                 return false;
             }
-        });*/
+        });
 
         return view;
     }
@@ -99,7 +101,6 @@ public class FragmentHome extends Fragment {
                     adapter.updateMovies(response.body().getResults());
                     adapter.notifyDataSetChanged();
                 }
-
             }
 
             @Override
@@ -129,7 +130,6 @@ public class FragmentHome extends Fragment {
                     adapter.updateMovies(response.body().getResults());
                     adapter.notifyDataSetChanged();
                 }
-
             }
 
             @Override
