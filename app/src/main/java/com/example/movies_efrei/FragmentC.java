@@ -67,15 +67,12 @@ public class FragmentC extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_c, container, false);
 
-        Button getStarted = (Button) view.findViewById(R.id.buttonGetStarted);
-        getStarted.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.i("MyActivity", "buttonPressed");
-                MainActivity.start= true;
-                Intent intent = new Intent(getActivity(), MainActivity.class);
-                startActivity(intent);
-            }
+        Button getStarted = view.findViewById(R.id.buttonGetStarted);
+        getStarted.setOnClickListener(v -> {
+            Log.i("MyActivity", "buttonPressed");
+            MainActivity.start= true;
+            Intent intent = new Intent(getActivity(), MainActivity.class);
+            startActivity(intent);
         });
         // Inflate the layout for this fragment
         return view;

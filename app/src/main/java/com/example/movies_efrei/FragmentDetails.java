@@ -13,6 +13,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.jetbrains.annotations.NotNull;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -75,7 +77,7 @@ public class FragmentDetails extends Fragment {
             }
 
             @Override
-            public void onFailure(Call<Images> call, Throwable t) {
+            public void onFailure(Call<Images> call, @NotNull Throwable t) {
 
             }
         });

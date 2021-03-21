@@ -2,6 +2,8 @@ package com.example.movies_efrei;
 
 import com.google.gson.annotations.SerializedName;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.io.Serializable;
 
 public class Movie implements Serializable {
@@ -73,6 +75,7 @@ public class Movie implements Serializable {
         this.posterPath = posterPath;
     }
 
+    @NotNull
     @Override
     public String toString() {
         return "Movie{" +

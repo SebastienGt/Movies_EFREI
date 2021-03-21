@@ -14,6 +14,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.jetbrains.annotations.NotNull;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -88,7 +90,7 @@ public class FragmentHome extends Fragment {
 
         call.enqueue(new Callback<Page>() {
             @Override
-            public void onResponse(Call<Page> call, Response<Page> response) {
+            public void onResponse(@NotNull Call<Page> call, Response<Page> response) {
                 Log.d(TAG, "Creating new adapter");
                 if (adapter == null){
                     layoutManager = new LinearLayoutManager(getContext());

@@ -52,9 +52,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.i("MyActivity", "MainAcitivity");
+        Log.i("MyActivity", "MainActivity");
         //setContentView(R.layout.fragment_container);
-        if (start == false) {
+        if (!start) {
             setContentView(R.layout.activity_main);
             pager = findViewById(R.id.pager);
             viewPager = new ViewPager(getSupportFragmentManager(), 1);
@@ -73,19 +73,16 @@ public class MainActivity extends AppCompatActivity {
             }
 
             mBottomNavigationView = findViewById(R.id.bottom_navigation_view);
-            mBottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-                @Override
-                public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                    switch (menuItem.getItemId()) {
-                        case R.id.home:
-                            Log.d(TAG, "Go to home");
-                            mFragmentManager.beginTransaction()
-                                    .replace(R.id.fragment_container, homeFragment, null)
-                                    .commit();
-                            break;
-                    }
-                    return false;
+            mBottomNavigationView.setOnNavigationItemSelectedListener(menuItem -> {
+                switch (menuItem.getItemId()) {
+                    case R.id.home:
+                        Log.d(TAG, "Go to home");
+                        mFragmentManager.beginTransaction()
+                                .replace(R.id.fragment_container, homeFragment, null)
+                                .commit();
+                        break;
                 }
+                return false;
             });
 
             mFragmentManager.beginTransaction()

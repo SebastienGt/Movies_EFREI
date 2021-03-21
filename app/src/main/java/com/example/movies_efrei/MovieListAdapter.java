@@ -52,11 +52,8 @@ public class MovieListAdapter extends RecyclerView.Adapter<MovieListAdapter.Movi
         ((TextView) holder.cardView.findViewById(R.id.textView_ListItem_Overview)).
                 setText(movies.get(position).getOverview());
 
-        holder.cardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                MainActivity.showDetails(movies.get(position));
-            }
+        holder.cardView.setOnClickListener(view -> {
+            MainActivity.showDetails(movies.get(position));
         });
 
         Glide.with(context).
