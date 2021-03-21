@@ -1,17 +1,21 @@
 package com.example.movies_efrei;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.material.snackbar.Snackbar;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -52,6 +56,14 @@ public class FragmentDetails extends Fragment {
 
         textViewTitle.setText(movie.getTitle());
         textViewOverview.setText(movie.getOverview());
+
+        Button B_Add = view.findViewById(R.id.button_Details_Save);
+        B_Add.setOnClickListener(v -> {
+            Log.i("MyActivity", "buttonPressed");
+            Snackbar mySnackbar = Snackbar.make(view, "Film ajouté !", 3000);
+            mySnackbar.show();
+        });
+
 
         getImages();
         return view;
