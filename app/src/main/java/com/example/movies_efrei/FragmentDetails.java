@@ -27,7 +27,6 @@ public class FragmentDetails extends Fragment {
     public static final String TAG = "MovieDetails";
 
     private Movie movie;
-    private Call<Page> pageCall;
     private Call<Images> imageCall;
 
     private RecyclerView recyclerViewGallery;

@@ -44,8 +44,6 @@ public class FragmentHome extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
-        ((MainActivity) getActivity()).setBottomNavigationMenu(MainActivity.MENU_MAIN);
-
         searchView = view.findViewById(R.id.searchView_Home_Search);
         recyclerViewResults = view.findViewById(R.id.recyclerView_Home_SearchResults);
         textViewTitle = view.findViewById(R.id.textView_Home_Title);

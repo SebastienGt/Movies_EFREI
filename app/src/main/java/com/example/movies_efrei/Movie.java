@@ -7,22 +7,6 @@ import org.jetbrains.annotations.NotNull;
 import java.io.Serializable;
 
 public class Movie implements Serializable {
-    private static final String TAG = "MovieClass";
-    public static final String TABLE_NAME = "movie";
-
-    public static final String COLUMN_ID = "movie_id";
-    public static final String COLUMN_TITLE = "title";
-    public static final String COLUMN_OVERVIEW = "overview";
-    public static final String COLUMN_POSTER_PATH = "poster_path";
-    public static final String COLUMN_USER_ID = "user_id";
-    public static final String CREATE_TABLE =
-            "CREATE TABLE " + TABLE_NAME + " ("
-                    + COLUMN_ID + " INTEGER PRIMARY KEY, "
-                    + COLUMN_TITLE + " TEXT, "
-                    + COLUMN_OVERVIEW + " TEXT, "
-                    + COLUMN_POSTER_PATH + " TEXT, "
-                    + COLUMN_USER_ID + " INTEGER"
-                    + ")";
 
     @SerializedName("id")
     private int id;

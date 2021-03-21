@@ -32,16 +32,4 @@ public class Images implements Serializable {
     public ArrayList<Image> getBackdrops() {
         return backdrops;
     }
-
-    public void setBackdrops(ArrayList<Image> backdrops) {
-        this.backdrops = backdrops;
-    }
-
-    public ArrayList<Image> getPosters() {
-        return posters;
-    }
-
-    public void setPosters(ArrayList<Image> posters) {
-        this.posters = posters;
-    }
 }
