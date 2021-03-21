@@ -29,18 +29,10 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MovieMain";
 
-    public static final int MENU_START = 0;
     public static final int MENU_MAIN = 1;
-    public static final int FRAGMENT_LOGIN = 2;
-    public static final int FRAGMENT_REGISTER = 3;
     public static final int FRAGMENT_HOME = 4;
-    public static final int FRAGMENT_FAVORITES = 5;
-    public static final int FRAGMENT_PROFILE = 6;
 
     public static FragmentManager mFragmentManager;
-
-    public static String currentUser;
-    public static int currentUserID;
 
     private Fragment homeFragment = new FragmentHome();
 
@@ -53,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.i("MyActivity", "MainActivity");
-        //setContentView(R.layout.fragment_container);
         if (!start) {
             setContentView(R.layout.activity_main);
             pager = findViewById(R.id.pager);
@@ -88,31 +79,6 @@ public class MainActivity extends AppCompatActivity {
             mFragmentManager.beginTransaction()
                     .add(R.id.fragment_container, new FragmentHome(), null)
                     .commit();
-        }
-    }
-
-    public void setBottomNavigationMenu(int menu){
-        /*
-        mBottomNavigationView.getMenu().clear();
-        switch(menu) {
-            case MENU_START:
-                mBottomNavigationView.inflateMenu(R.menu.menu_start);
-                break;
-            case MENU_MAIN:
-                mBottomNavigationView.inflateMenu(R.menu.menu_main);
-                break;
-        }
-         */
-    }
-
-
-    public void replaceFragment(int fragment){
-        switch (fragment){
-            case FRAGMENT_HOME:
-                mFragmentManager.beginTransaction()
-                        .replace(R.id.fragment_container, homeFragment, null)
-                        .commit();
-                break;
         }
     }
 
