@@ -6,6 +6,10 @@ import org.jetbrains.annotations.NotNull;
 
 import java.io.Serializable;
 
+
+//Classe décrivant les films récupérés sur IMDB
+//avec leurs différentes caractéristiques
+
 public class Movie implements Serializable {
     private static final String TAG = "MovieClass";
     public static final String TABLE_NAME = "movie";

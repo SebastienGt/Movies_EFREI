@@ -14,6 +14,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 
+
+//Menu principal de l'appli avec chaque film présenté par carte
 public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.ImageViewHolder> {
     private static final String TAG = "MovieGallery";
 
