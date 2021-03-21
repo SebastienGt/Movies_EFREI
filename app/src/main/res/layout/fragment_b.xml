@@ -46,16 +46,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/circle_blank" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="60dp"
-        android:text="Skip"
-        android:textSize="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -75,7 +65,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="44dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="16dp"
         android:text="You can see"
         android:textColor="#FFFFFF"
         android:textSize="26dp"
